@@ -1,0 +1,102 @@
+1. 
+git branch---
+Branches are created in GIT to diverge from the working project . branch is also a repository available on VCS .
+there is no limitation in creating branches.These help while fixing a bug or adding a file.
+git branch ---to see the available branches
+git branch <branch name>--to add a branch
+2.
+git checkout <branch name>---to move from working branch to the specified branch.
+3.
+git merge <branch name>-- this helps to merge the current branch with the main branch 
+4.
+git ignore---
+this mainly describes the files that are not tracked intentionally and ignored by GIT 
+git .gitignore --contains path of files that should be ignored
+5.
+git push---
+This command helps to upload all the local repository files to remote repository
+git push 
+6.
+git stash
+This keeps the track of working directory and the index .helps to save the local modification away and revert back.
+takes care of the un finished changes.
+git stash --helps to save local changes
+git stash apply -- apply the changes that are made.
+7.
+git head
+Points to the latest commit made for a file .This acts like head of the next commit
+git show HEAD -- Used to check the status of the head.
+8.
+git pull
+This command is used to get the file from the remote repository to the local repository 
+git pull <remote> --fetches the remote copy and merge with the local copy
+9.
+git remote
+Used to make the connections with the remote repositoty
+git remote -v ---specifies current remote connections
+10.
+git revert
+This helps to undo the changes to the history of commits. done based on the HEAD Id
+git revert HEADID---specified ID'S commit will be lost.
+11.
+git tag
+To create tags to the file we use tag command
+git tag <tag_name> ---to create a new tag
+12.
+git mv
+This is used to rename the file 
+git mv <Toberenamed.txt> <renamed.txt> --- command to rename the existing file
+13.
+git init
+Helps in creating a blank repository and helps in making existing project as a GIT project.
+git init ---creates a sub directory(.git) in the current working directory.
+14.
+git add
+Adding the file content to the staging area.and updates the content to staging area.
+git add <file_name>--- specify the name of the file to be added.
+15.
+git commit
+Specifies the project staged changes.helps for safe version of project.
+git commit -m "<message>"--- specified message to be given.
+16.
+git clone
+Helps to clone local or remote repository
+git clone <path> --needs to specify the path of the repository
+17.
+git restore
+This command discards uncommited local changes
+git restore <file_name>
+18.
+git diff
+Helps to view the modifications in the file
+git diff --- command gives the modified lines
+19.
+git log
+This is used to review and read the history of the files.
+20.
+git status 
+displays the state of the working directoryand the staging area.
+21.
+setting environment variables username a
+git config --global username "<USER_NAME>"
+git config --global emailid "<EMAIL>"
+22.
+local repository --Repository that make local changes
+Centralized repository --Stores the code at a place and helps to work among people in group.
+Distributed Server -- Can be Accessed and modified.
+23.
+open-source
+Speed
+Secure
+Reliable
+Fast
+Scalable
+24.
+VCS is a Software that maintains the different versions of product we develop .records the changes in the file .Helps to compare  Files and versions .
+25.
+Index file contains list of pathnames with permissions.
+
+
+
+
+
