@@ -1,0 +1,145 @@
+1>git branch
+
+Git branch command is used for listing all the branches of current working repository.
+$ git branch
+
+2>git checkout
+
+Checkout is used to switch between branches of current working repository or can be used to switch between versions of current branch.
+$ git checkout master
+or
+$ git checkout version1.0
+
+3>merge
+
+Merge is used to merge two branches of a current working repository.
+$ git checkout master
+$ git merge branch1
+
+4>git ignore
+
+Git ignore is used to ignore the files which we don't want to upload and list of all such files name is mentioned in .gitignore file.
+Example : add ignored.txt file in .gitignore and execute following.
+$ touch .gitignore
+$ touch ignored.txt
+$ git add ignored.txt
+
+5>git push
+
+Git push is used to push the local repository to the remote system.
+$ git push
+
+6>git stash 
+
+Git stash is used as if we want to switch another branch without commiting the current branch.
+$ git checkout branch1
+$ touch file.txt
+$ git add file.txt
+$ git stash
+$ git checkout master
+$ git checkout branch1
+$ git stash apply
+
+7>git head
+
+Git head is used to see the id of head.
+$ git show head
+
+8>git pull
+
+Git pull is used to pull a repository from a remote URL.
+$ git pull
+
+9>git remote 
+
+Git remote is used to add a remote URL or can be used for checking the version of remote or can be used to remove the remote.
+$ git remote add ServerName URL
+$ git remote -v
+$ git remote rm ServerName
+
+10>git revert
+
+Git revert is used to get back to the previous head of a given head.
+$ git revert head_id
+
+11>git tag
+
+Git tag is used to mark a version of files which we can see or differentiate on the basis of their versions.
+$ git tag version1.0
+
+12>git mv
+
+Git mv is used to rename a file.
+$ git mv oldname.txt newname.txt
+
+13>git init
+
+Git init is used to initialize the current dirctory as a git repository.
+$ git init
+
+14>git add
+
+Git add is used to add files to the staging area.
+$ git add filename.txt
+
+15>git commit 
+
+Git commit is used to commit the changes done the files and make them persistant.
+$ git commit -m "Some comment"
+
+16>git clone
+
+Git clone is used to clone a remote repository to your current directory.
+$ git clone
+
+17>git restore
+
+Git restore is used to unstage or discard the uncommited changes.
+$ git restore file.txt
+
+18>git diff
+
+Git diff is used to get track of changes made on files.
+$ git diff 
+
+19>git log 
+
+Git log is used to view the info of previous commits that are made on the repository.
+$ git log
+
+20>git status 
+
+Git status tells the information about staging area.
+$ git status
+
+21>Setting git environment 
+
+Git environment is used to set the credentials.
+$ git config --global user.name "UserName"
+$ git config --global user.email "user@example.com"
+
+22>Local repository,centralized repository and distributed server
+
+Local repository is maintained and tracked in the local system.
+Centralized repository is maintained and being tracked at a centralized server.
+Distributed repository is maintained being tracked at many systems.
+
+23>Features of git vcs
+
+a) Scalable
+b) Fast
+c) Reliable
+d) Open-Source
+e) Compatibility
+f) Branching
+g) Secure
+
+24>What is VCS? What are the benefits of VCS?
+
+VCS is a version control system used to keep track of files in a repository and maintain them.
+Benefits of VCS:
+Performance
+Security
+Flexibility
+Wide Acceptance
+Open Source
