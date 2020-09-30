@@ -1,0 +1,107 @@
+		localdir ----ADD---- staged -----commit---- repo
+
+1.git branch
+List all branches for the repository
+
+2. git checkout
+	a: When used for branching, it will switch to another branch
+	b: When used for tag, it will switch to that version and shows content
+
+3. git merge
+Merges specified branch changes to branch in which we are currently working
+
+4.
+ git ignore
+.ignore file is used when we don't want any file to be added on git. Like sensitive keys file.
+
+5.
+git push
+push the commits to hosting site.
+
+6.
+git stash
+Any uncommited but staged files info will be saved while switching to another branch. With "git stash apply", we can retrieve it back.
+
+7.
+git head
+Shows head position of current branch.
+
+8.
+git pull
+It pulls remote server changes to specified branch. Syntax is git pull servername branchname.
+
+9.
+git remote
+It's used whenever any remote server interaction happens. 
+	a: git remote -v to list out remote server locations
+	b: git remote add servername URL : Specifies which server URL we want to interact
+	c: git pull and remove are other options we have
+10.
+git revert
+Any committed changes can be reverted back to previous one by specifying previous head-id.
+
+11.
+git tag
+We can tag a particular point in branch by assigning versions. Later we can go to any tag and can see that version file's status.
+
+12.
+git mv current_name final_name
+This command renames file name both in git and local folder.
+
+13.
+git init
+Initializes any folder as git folder. Adds some hidden files which tracks every changes happened in this local repo.
+
+14.
+git add
+Adds files from local folder to staging area.
+
+15.
+git commit
+Commits all changes uploaded from staging area to repo which can finally be pushed to hosting site.
+
+16.
+git clone
+Clones specified repo present in given URL to your local system. Any chnges to cloned folder then can be used like normal git folders.
+
+17.
+git restore
+Moves files which are still present in staging area back to local folder.
+
+18.
+git diff
+Tells difference between local folder files and committed repository.
+
+19.
+git log 
+It will list all commits with headposition,timestamp, comments given while committing.
+
+20.
+git status
+It will show current status of files in local repo which are staged but uncommitted, or not tracked, or need to be staged(due to modification or new file).
+
+21.
+Environment setup
+A one time setup to hosting site account where you want to save repo. Itr can be made as global or local change
+To setup username: git config --global user.name "user_name"
+To setup email: git config --global user.email "email_id"
+
+22.
+Local repo: Repository which is local to your system. We can make any repo as git local repo by git init. But this one is good for single user.
+Centralized repo: Works with multiple users(Good for collaboration) where every data is stored at single site. It's to manage but faces single point of failure problem.
+Distributed repo: It removes drawback of centralized repo but have it's own problem like syncing. Repo can be maintained at local repo and metadata like no. of files, timestamp, etc 
+can be saved at server. It's scalable and more secure as backup point of view.
+
+23, 24.
+VCS: Version control system is used for tracking every development of software and maintain every version in proper way without disturbing main working version.
+Git VCS feature:
+a) Traceability: Repositories can be traced for any modification and helps out to point out problems from where it started propagating.
+b) Distributed
+c) Scalable: Can accommodate sudden spike/ decrease in users effectively and also can manage resource allocation effectively according to need/demand.
+d) Secured
+e) Fast: Due to implemented data structure makes it fast.
+
+25.
+Index file is a hidden file automatically created after git init. It maintains some internal data structure to track changes in local git folder.
+Modified files storage?? May be using some tree/graph data structure. 
+
