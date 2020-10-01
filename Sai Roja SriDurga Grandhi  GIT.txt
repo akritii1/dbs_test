@@ -1,0 +1,124 @@
+1) git branch 
+Branching in git is used to create a modules that are needed to be tested without disturbing the present working code.
+Once the brach code was tested successfully it can be merged with the master branch.
+git branch gives all the branches in the repository along with the current working branch being highlighted.
+syntax: git branch 
+
+2)git checkout
+This command is used to move to the desired branch.It can move to any branch that was created in the repository.
+syntax : git checkout branch_name 
+
+3)git merge
+This command is used to merge the two branches.
+After creating the branches , move to the branch where you want to merge the other branch.After reaching the destination branch we can use command.
+syntax: git merge branch_name
+
+4)git ignore
+git ignore is used to ignore the files that were specified in a special file called .gitignore file.
+Steps to follow :
+-->create a .gitignore file
+-->open the file and add file name that you wanted to ignore
+-->add .gitignore file and commit the changes.
+-->now try to add the file that was addded int the .gitignore file.
+-->the file doesnot goes to stagging area and will receive  a warning stating that the file was specified to ignore
+
+5)git push
+This command is used to push all the changes and the newly added files in the local repository to the remote or centralised repository.
+The files that are committed after adding or modifying will be pushed to the centralised repository.
+syntax : git push
+
+6)git stash
+This command is used when  we are navigating between two branches.When the file in one branch is in stagging stage .
+you can navigate to other branch without performing commit by specifying the stash command.
+Then the stash saves the present working file under stagging stage so that we can commit the changes after returning to the branch.
+sybtax : git stash
+
+7)git head
+This command is used to show the information about the last committed file.
+It gives the details like head id , branch , author , time of modification and the contents that are modified.
+syntax : git show head
+
+8)git pull
+This command is used to pull the files from remote or centralised repository to the local repository.
+syntax : git pull
+
+9)git remote
+This command is used to add a remote repository to the centralised repository
+syntax : git remote add name centralised repository url
+
+10)git revert
+This command is used to undo the changes done to the file.
+It commonly moves back to the head id that was not modified.
+Head id is used to revert the chaanges done to the file.
+syntax : git revert head_id
+
+11)git tag 
+This command is used to craete different versions of the project.
+If we wanted to have the changed or modified versions of the projects we will go for tags.
+Each tag have the each version files
+syntax : git version version_name
+
+12)git mv
+This command is used to rename the the files in the repository.
+syntax : git mv old_file new_file
+
+13)git init
+This command is used to initialise the repository in the local machine
+syntax : git init
+
+14)git add
+This command is used to add the files to the local repository or stagging stage.
+syntax : git add file_name
+
+15)git commit 
+This command is used to commit all the modifications to the project files.
+The modification can be inserting,editing and deleting.
+syntax : git commit -m "comment "
+
+16)git clone
+This command is used to clone all the files from the centralised repository to the local repository.
+syntax : git clone "url to the repository"
+
+17)git restore
+This command is used to delete the files from the stagging storage.
+syntax : git restore file_name
+
+18)git diff
+This command is used to show the difference between the file before and after commit.
+syntax : git diff
+
+19)git log 
+This command is used to see all the logs or commits done on the repository
+syntax : git log
+
+20)git status 
+This command is used to see the prsent status of the local repository aafter the last commit.
+syntax : git status
+
+21)setting environment variables 
+
+git --global user.name "username"
+git --global user.email "email"
+
+22)Local repository : The repository that was present on the local system.
+Centralised repository : The repository that was hosted in the centralised sytem.
+Distributed servers : The repository that was distributed over multiple systems.
+
+23)Features of GIT VCS:
+-->Open source
+-->Tracability
+-->Scalable
+-->Branching Structure
+-->High speed
+
+24)Version Control System(VCS)
+VCS is a software that is used to store the projrct along with the modifications that were done on the the files.
+Benefits:
+-->centralised and distributed VCS offers collaborating with other teammates.
+-->Trackability
+-->Offline Working
+
+25)Indexing in Git:
+Git uses the indices used to store the modified files.
+Each file have unique index known as head id through which the files can be distinguished.
+Whenever the files were modified , the file will be given a new Head id.

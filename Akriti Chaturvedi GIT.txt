@@ -1,0 +1,86 @@
+GIT Branch: is a version of repository that diverges from the main working project.
+git branch branchname
+
+GIT checkout : helps to change the branch or the tag
+git checkout branchname/tagname
+
+GIT merge: helps merge two branches into one
+git merge branchname
+
+GIT ignore: helps create a file in which all the files that are listed are ignored by git.
+touch .gitignore
+git add .gitignore
+
+GIT push: to send the file to the remote repository from the local repository
+git push hyperlink 
+
+GIT stash: Suppose you are working on a branch and you stage the changes and then you go into another branch to work into other things, we can stash our staging process so we dont have redo all the staging part
+git add .
+git status 
+git stash 
+
+GIT head: tells us where the current pointer is 
+git show head
+
+GIT pull: helps us get files and directories from the remote server to the current local location so as to keep sync between the two
+git pull remoteservername/ hyperlink
+
+GIT remote: helps us connect to a remote server
+git remote -- lists all the remote connections
+git remote add -- allows us to add remote connection
+
+GIT revert: it is used to revert the commit using the head pointer
+git show head
+git revert head_ptr
+
+GIT tag: it is used to create versioning in your system.after deployment of one version we can start working on the second version while the first is in market. After development if found unstable we can move back to first version else if successful we can switch to the second version of the program
+git tag 
+git tag v1
+git checkout v2
+
+GIT mv: it is used to rename a file.
+git mv file_1 file_2
+
+GIT init: it is used to initialise a repository
+git init repository-name
+
+GIT add: it is used to add the local files to the staging area which helps to later commit those changes
+git add filename
+
+GIT commit: it helps save changes onto your local repository
+git commit -m "commit message"
+
+GIT clone: clone creates a duplicate of a remote repository 
+git clone hyperlink
+
+GIT restore: it is used to remove the files from the staging area
+git restore --stage filename
+
+GIT diff: tells us the difference in the files before and after edit
+git diff filename
+
+GIT log: gives us details analysis of the changes made to the vcs
+git log
+
+GIT status: gives us the status of the vcs
+git status
+
+env variables setting: 
+git config --global user.name "username"
+git config --global user.email "useremail"
+
+Local Repository: used by single developer, simple to use and is prone to error,integration is difficult
+Centralised Repository: In centralized there is a server and a client. The server is the master repository which contains all of the versions of the code.TO work on a code the client needs to establish a connection and get the code.
+Distributed Repository: Every client or user can work locally and disconnected which is more convenient than centralized source control and that’s why it is called distributed.
+
+Features of GIT VCS: open source,scalable,distributed,secure,speed
+
+VCS and it's advantages: it is a software which is used to track the various changes made to a project throughout it's lifecycle.
+Benefits:
+complete change history of file
+simultanoeus working
+branching and merging
+tracabilty
+
+Index file,and how are modified files stored: it is used in the staging area between your working directory and your repository, the modified files can be viewed by git status and by git add they can be sent to the staging area then commmited.
+

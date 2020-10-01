@@ -1,0 +1,696 @@
+I
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop (master)
+$ cd Gitfolder/
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder (master)
+$ ls
+Gitfolder/
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder (master)
+$ cd Gitfolder/
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (master)
+$ git branch assignbranch
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (master)
+$ git branch
+  assignbranch
+* master
+  testbranch
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (master)
+$ git checkout assignbranch
+Switched to branch 'assignbranch'
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (assignbranch)
+$ touch bfile.txt
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (assignbranch)
+$ git add bfile.txt
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (assignbranch)
+$ git commit -m "Added file"
+[assignbranch d700828] Added file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 bfile.txt
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (assignbranch)
+$ git branch
+* assignbranch
+  master
+  testbranch
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (assignbranch)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (master)
+$ git merge assignbranch
+Updating e710503..d700828
+Fast-forward
+ bfile.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 bfile.txt
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (master)
+$ ls
+assignment.txt  file1                        Ujjwal_Kumar_Linux_Day02.txt
+bfile.txt       newfile.txt
+comit           Ujjwal_Kumar_day03Part1.txt
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (master)
+$ vi bfile.txt
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (master)
+$ cat bfile.txt
+Added line from master branch.
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bfile.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (master)
+$ git add bfile.txt
+warning: LF will be replaced by CRLF in bfile.txt.
+The file will have its original line endings in your working directory
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (master)
+$ git commit -m "made changes in the master branch."
+[master 14bce49] made changes in the master branch.
+ 1 file changed, 1 insertion(+)
+
+
+
+II
+
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ touch igfile.txt
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ cat .gitignore
+igfile.txt
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git config --global core.excludesfile ~/.gitignore_global
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git add *
+The following paths are ignored by one of your .gitignore files:
+igfile.txt
+
+III
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ touch onlyforlocal.txt
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git add onlyforlocal.txt
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git commit -m "added only local file"
+[master a398e66] added only local file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 onlyforlocal.txt
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git rm --cached onlyforlocal.txt
+rm 'onlyforlocal.txt'
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ ls
+assignment.txt  file1        onlyforlocal.txt
+bfile.txt       igfile.txt   Ujjwal_Kumar_day03Part1.txt
+comit           newfile.txt  Ujjwal_Kumar_Linux_Day02.txt
+
+
+IV
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git branch test
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git branch
+* master
+  test
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git checkout test
+Switched to branch 'test'
+M       .gitignore
+D       onlyforlocal.txt
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (test)
+$ git branch
+  master
+* test
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (test)
+$ touch firstfile.txt
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (test)
+$ touch secondfile.txt
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (test)
+$ git add firstfile.txt
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (test)
+$ git status
+On branch test
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    onlyforlocal.txt -> firstfile.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        onlyforlocal.txt
+        secondfile.txt
+
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (test)
+$ git stash
+warning: LF will be replaced by CRLF in .gitignore.
+The file will have its original line endings in your working directory
+Saved working directory and index state WIP on test: a398e66 added only local file
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (test)
+$ git stash list
+stash@{0}: WIP on test: a398e66 added only local file
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (test)
+$ git branch
+  master
+* test
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (test)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git checkout test
+Switched to branch 'test'
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (test)
+$ git status
+On branch test
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        igfile.txt
+        secondfile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (test)
+$ git stash apply
+On branch test
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   firstfile.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        secondfile.txt
+
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (test)
+$ git status
+On branch test
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   firstfile.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        secondfile.txt
+
+
+V
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ touch filehead
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git add filehead
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git commit -m "filehead added"
+[master 9cc6226] filehead added
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 filehead
+ create mode 100644 firstfile.txt
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git show head
+commit 9cc62260ae8316e8ccf87bfc20a3dbdd04a694cf (HEAD -> master)
+Author: ujjwal <ujjwalkumarhitk@gmail.com>
+Date:   Wed Sep 30 15:47:17 2020 +0530
+
+    filehead added
+
+diff --git a/filehead b/filehead
+new file mode 100644
+index 0000000..e69de29
+diff --git a/firstfile.txt b/firstfile.txt
+new file mode 100644
+index 0000000..e69de29
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git log
+commit 9cc62260ae8316e8ccf87bfc20a3dbdd04a694cf (HEAD -> master)
+Author: ujjwal <ujjwalkumarhitk@gmail.com>
+Date:   Wed Sep 30 15:47:17 2020 +0530
+
+    filehead added
+
+commit a398e66038a6c3449e20cb9f6cd29e2cf5b7bf16 (test)
+Author: ujjwal <ujjwalkumarhitk@gmail.com>
+Date:   Wed Sep 30 15:30:36 2020 +0530
+
+    added only local file
+
+commit 3edf28a8070bb3b3d3a899f74cb1900f78776d22
+Author: ujjwal <ujjwalkumarhitk@gmail.com>
+Date:   Wed Sep 30 15:19:57 2020 +0530
+
+    bfile adde
+
+commit 5d449018e50e4bbc8363ac8259a9c9bd385b6420
+Author: ujjwal <ujjwalkumarhitk@gmail.com>
+Date:   Wed Sep 30 15:16:37 2020 +0530
+
+     git ignore is working
+.....
+
+
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ vi filehead
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git add filehead
+warning: LF will be replaced by CRLF in filehead.
+The file will have its original line endings in your working directory
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git commit -m " Hed file committed"
+[master 241d523]  Hed file committed
+ 1 file changed, 3 insertions(+)
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git show head
+commit 241d52342105cf242981bb039a63508b6d5778c4 (HEAD -> master)
+Author: ujjwal <ujjwalkumarhitk@gmail.com>
+Date:   Wed Sep 30 15:55:25 2020 +0530
+
+     Hed file committed
+
+diff --git a/filehead b/filehead
+index e69de29..563317b 100644
+--- a/filehead
++++ b/filehead
+@@ -0,0 +1,3 @@
++hs\sjvdghasdjasdjk
++djasjkdsaljkd
++
+
+VI
+
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git remote -v
+origin  https://github.com/UjjwalDBS/Gitfolder.git (fetch)
+origin  https://github.com/UjjwalDBS/Gitfolder.git (push)
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git remote -v
+origin  https://github.com/UjjwalDBS/Gitfolder.git (fetch)
+origin  https://github.com/UjjwalDBS/Gitfolder.git (push)
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git remote add RemoteSer https://github.com/UjjwalDBS/newfolder.git
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git remote -v
+RemoteSer       https://github.com/UjjwalDBS/newfolder.git (fetch)
+RemoteSer       https://github.com/UjjwalDBS/newfolder.git (push)
+origin  https://github.com/UjjwalDBS/Gitfolder.git (fetch)
+origin  https://github.com/UjjwalDBS/Gitfolder.git (push)
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+
+$ git remote add RemoteServ https://github.com/UjjwalDBS/Gitfolder.git
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git pull RemoteServ master
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 671 bytes | 5.00 KiB/s, done.
+From https://github.com/UjjwalDBS/Gitfolder
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> RemoteServ/master
+Merge made by the 'recursive' strategy.
+ fileforpullfromremote.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fileforpullfromremote.txt
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git remote rm RemoteServ
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git remote -v
+origin  https://github.com/UjjwalDBS/Gitfolder.git (fetch)
+origin  https://github.com/UjjwalDBS/Gitfolder.git (push)
+
+
+VII
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ touch revfile
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git add revfile
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git commit -m "rev. file"
+[master 3bf448f] rev. file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 revfile
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ vi revfile
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git add revfile
+warning: LF will be replaced by CRLF in revfile.
+The file will have its original line endings in your working directory
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git commit -m " modified"
+[master 8f808b9]  modified
+ 1 file changed, 4 insertions(+)
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ cat revfile
+hghjhh
+jhjfjfgfj
+jkkkjkj
+jhvjhh
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git log
+commit 8f808b999c7b8fccee655ae7ab4aa90bb60594f2 (HEAD -> master)
+Author: ujjwal <ujjwalkumarhitk@gmail.com>
+Date:   Wed Sep 30 16:16:06 2020 +0530
+
+     modified
+
+commit 3bf448fd12681be8bf1e443cc6cef06f5f5ae3ec
+Author: ujjwal <ujjwalkumarhitk@gmail.com>
+Date:   Wed Sep 30 16:14:40 2020 +0530
+
+    rev. file
+
+commit 1daea34914a6f4edf6e2071dfe498ff007d23ff3
+Merge: 241d523 96aad17
+Author: ujjwal <ujjwalkumarhitk@gmail.com>
+Date:   Wed Sep 30 16:11:37 2020 +0530
+
+    Merge branch 'master' of https://github.com/UjjwalDBS/Gitfolder into master
+
+commit 96aad17d6dc25a8989e3a8fed4a15e5c139330fa
+Author: UjjwalDBS <72064943+UjjwalDBS@users.noreply.github.com>
+Date:   Wed Sep 30 16:11:15 2020 +0530
+
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git revert  8f808b999c7b8fccee655ae7ab4aa90bb60594f2
+[master 9f3dffd] Revert " modified"
+ 1 file changed, 4 deletions(-)
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ cat revfile
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$
+
+VIII
+
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ echo "File 1 content" >> file1
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ echo "File 2 content" >> file2
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ echo "File 3 content" >> file3
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git add file1
+warning: LF will be replaced by CRLF in file1.
+The file will have its original line endings in your working directory
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git add file2
+warning: LF will be replaced by CRLF in file2.
+The file will have its original line endings in your working directory
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git add file3
+warning: LF will be replaced by CRLF in file3.
+The file will have its original line endings in your working directory
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git commit -m "Committed all three files"
+[master aee31b5] Committed all three files
+ 3 files changed, 3 insertions(+)
+ create mode 100644 file2
+ create mode 100644 file3
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git tag version1.0
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git tag
+version1.0
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git show version1.0
+commit aee31b5cf5a2c05b4dfc465d696c1fbfe3d58995 (HEAD -> master, tag: version1.0)
+Author: ujjwal <ujjwalkumarhitk@gmail.com>
+Date:   Wed Sep 30 16:28:56 2020 +0530
+
+    Committed all three files
+
+diff --git a/file1 b/file1
+index f59746e..224cdd3 100644
+--- a/file1
++++ b/file1
+@@ -1 +1,2 @@
+ afslksalfk
++File 1 content
+diff --git a/file2 b/file2
+new file mode 100644
+index 0000000..04ef7ad
+--- /dev/null
++++ b/file2
+@@ -0,0 +1 @@
++File 2 content
+diff --git a/file3 b/file3
+new file mode 100644
+index 0000000..fda7882
+--- /dev/null
++++ b/file3
+@@ -0,0 +1 @@
++File 3 content
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ vi file1
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ vi file2
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ vi file3
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git add file1
+warning: LF will be replaced by CRLF in file1.
+The file will have its original line endings in your working directory
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git add file2
+warning: LF will be replaced by CRLF in file2.
+The file will have its original line endings in your working directory
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git add file3
+warning: LF will be replaced by CRLF in file3.
+The file will have its original line endings in your working directory
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git commit -m " Modified three file"
+[master f894f77]  Modified three file
+ 3 files changed, 4 insertions(+), 1 deletion(-)
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git tag version2.0
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git show version2.0
+commit f894f774652b5b6b1f8d097b33ce51d7ee73cc66 (HEAD -> master, tag: version2.0)
+Author: ujjwal <ujjwalkumarhitk@gmail.com>
+Date:   Wed Sep 30 16:31:52 2020 +0530
+
+     Modified three file
+
+diff --git a/file1 b/file1
+index 224cdd3..204360f 100644
+--- a/file1
++++ b/file1
+@@ -1,2 +1,2 @@
+-afslksalfk
++modified  afslksalfk
+ File 1 content
+diff --git a/file2 b/file2
+index 04ef7ad..3385438 100644
+--- a/file2
++++ b/file2
+@@ -1 +1,2 @@
++modified
+ File 2 content
+diff --git a/file3 b/file3
+index fda7882..47478e1 100644
+--- a/file3
++++ b/file3
+@@ -1 +1,3 @@
++
++modified
+ File 3 content
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git show version1.0
+commit aee31b5cf5a2c05b4dfc465d696c1fbfe3d58995 (tag: version1.0)
+Author: ujjwal <ujjwalkumarhitk@gmail.com>
+Date:   Wed Sep 30 16:28:56 2020 +0530
+
+    Committed all three files
+
+diff --git a/file1 b/file1
+index f59746e..224cdd3 100644
+--- a/file1
++++ b/file1
+@@ -1 +1,2 @@
+ afslksalfk
++File 1 content
+diff --git a/file2 b/file2
+new file mode 100644
+index 0000000..04ef7ad
+--- /dev/null
++++ b/file2
+@@ -0,0 +1 @@
++File 2 content
+diff --git a/file3 b/file3
+new file mode 100644
+index 0000000..fda7882
+--- /dev/null
++++ b/file3
+@@ -0,0 +1 @@
++File 3 content
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ cat file1
+modified  afslksalfk
+File 1 content
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git checkout version1.0
+Note: switching to 'version1.0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at aee31b5 Committed all three files
+M       .gitignore
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder ((version1.0))
+$ cat file1
+afslksalfk
+File 1 content
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder ((version1.0))
+$
+
+
+IX
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ echo "some text hahaha" mfilex
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git add mfilex
+warning: LF will be replaced by CRLF in mfilex.
+The file will have its original line endings in your working directory
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git commit -m "mv command"
+[master bc7c814] mv command
+ 1 file changed, 1 insertion(+)
+ create mode 100644 mfilex
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ git mv -v mfilex newmfilex
+Renaming mfilex to newmfilex
+
+ujjwa@DESKTOP-7GTD77K MINGW64 ~/Desktop/Gitfolder (master)
+$ cat newmfilex
+some text hahaha
+
+
+
+
+
+
+
+
