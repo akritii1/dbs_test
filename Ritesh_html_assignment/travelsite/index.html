@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        
+        <div class="carousel">
+            <img class="mySlides" src="/img/carousel-3.jpg">
+            <img class="mySlides" src="/img/carousel-1.jpg" >
+            <img class="mySlides" src="/img/carousel-4.jpg" >
+            <img class="mySlides" src="/img/baliimg1.jpg" >
+        </div>
+        
+        <div class="header">
+            <a class="logo" href="/">
+                <img src="/img/image.png" alt="logo"/>
+            </a>
+            <ul class="nav-links">
+                <li>Home</li>
+                <li>About</li>
+                <li>Places</li>
+                <li>Hotels</li>
+            </ul>
+        </div>
+        
+        <div class="home" >
+            <h1 >Welcome to Bali!</h1>
+        </div>
+    
+        <div class="about">
+            
+                <img src="/img/baliimg3.jpg">
+                <p>Bali is an Indonesian island known for its forested volcanic mountains, iconic rice paddies, beaches and coral reefs. The island is home to religious sites such as cliffside Uluwatu Temple. To the south, the beachside city of Kuta has lively bars, while Seminyak, Sanur and Nusa Dua are popular resort towns. The island is also known for its yoga and meditation retreats.</p>
+            
+        </div>
+
+        <div class="places">
+            <h1>Beautiful tourist places in Bali</h1>
+            <div class="cards">
+                <div class="card">
+                    <img src="/img/seminyak.jpg" alt="">
+                    <h3>Seminyak</h3>
+                    <p>Seminyak is a mixed tourist residential area on the west coast of Bali in Indonesia, just north of Kuta and Legian. Originally a separate township, this is now another suburb of Kuta. This area is very popular with resident expatriates and land and accommodation prices are amongst the highest in Bali. Plenty of luxury spas and hotels abound. Owing to its high density of high-end shopping, combined with the clustering of many fine eating establishments, it has rapidly become one of the most well-known tourist areas on the island. In addition to a few commercial strips with popular and lively restaurants, bars, villas, and good crafts/furniture shops, there are a few notable establishments: Ku Dé Ta, which is a bar/restaurant with a cult following based on its beach side/semi-resort atmosphere that has earned it the title of number one party spot in various magazines, and Oberoi, which is an expensive hotel with a worldwide reputation.</p>
+                </div>
+                <div class="card">
+                    <img src="/img/mount.jpeg" alt="">
+                    <h3>Mount Batur</h3>
+                    <p>Mount Batur is an active volcano located at the center of two concentric calderas north west of Mount Agung on the island of Bali, Indonesia. The south east side of the larger 10×13 km caldera contains a caldera lake. The inner 7.5-kilometer-wide caldera, which was formed during emplacement of the Bali ignimbrite, has been dated at about 23,670 and 28,500 years ago. The first documented eruption was in 1804 and the most recent was in 2000.</p>
+                </div>
+                <div class="card">
+                    <img src="/img/ulun.jpg" alt="">
+                    <h3>Ulun Danu Beratan Temple
+                    </h3>
+                    <p>Pura Ulun Danu Beratan, or Pura Bratan, is a major Hindu Shaivite Shiva temple in Bali, Indonesia. The temple complex is on the shores of Lake Bratan in the mountains near Bedugul. The water from the lake serves the entire region in the outflow area; downstream there are many smaller water temples that are specific to each irrigation association.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="hotels">
+            <h1>Best hotels for your stay in Bali </h1>
+            <div class="cards">
+                <div class="card">
+                    <img src="/img/hotel1.jpg" alt="">
+                    <h3>Nandini Jungle Resort and Spa Bali
+                    </h3>
+                    <p>Resort hotel featuring upscale villas with balconies overlooking the jungle, plus a pool & a spa.
+                    </p>
+                    <p>Address : Br, Jl. Susut, Buahan, Payangan, Kabupaten Gianyar, Bali 80572, Indonesia•+62 361 982777
+                    </p>
+                    <p>Cost : Rs 8640/night</p>
+                    <p>Customer Rating : 4.5/5</p>
+                </div>
+                <div class="card">
+                    <img src="/img/hotel2.jpg" alt="">
+                    <h3>Odika Lovina House and Villa
+
+                    </h3>
+                    <p>Casual rooms, airy apartments & modern villas in a laid-back hotel with an outdoor pool.
+
+                    </p>
+                    <p>Address : Jalan Cendrawasih Gang Merak, Kalibukbuk, Lovina, Anturan, Buleleng, Anturan, Kecamatan Buleleng, Anturan, Kec. Buleleng, Kabupaten Buleleng, Bali 80119, Indonesia•+62 813-5300-7603
+                    </p>
+                    <p>Cost : Rs 1200/night</p>
+                    <p>Customer Rating : 4.1/5</p>
+                </div>
+                <div class="card">
+                    <img src="/img/hotel3.jpg" alt="">
+                    <h3>Hanging Gardens Of Bali
+                    </h3>
+                    <p>Luxurious resort featuring posh Balinese villas & an acclaimed, cascading pool, plus a spa & dining.
+                    </p>
+                    <p>Address : Buahan, Payangan, Gianyar, Bali 80571, Indonesia•+62 361 982700
+
+                    </p>
+                    <p>Cost : Rs 11000/night</p>
+                    <p>Customer Rating : 4.7/5</p>
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+        <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}    
+                x[myIndex-1].style.display = "block";  
+                setTimeout(carousel, 3000); // Change image every 4 seconds
+            }
+
+            const navLinks = document.querySelectorAll('.nav-links li');
+            navLinks[0].addEventListener('click', () => {
+                const sectionTop = document.querySelector('.home').getBoundingClientRect().top;
+
+                window.scroll({top: sectionTop - 53, behavior: "smooth"});
+            })
+            
+            navLinks[1].addEventListener('click', () => {
+                const sectionTop = document.querySelector('.about').getBoundingClientRect().top;
+
+                window.scroll({top: sectionTop - 53, behavior: "smooth"});
+            })
+            
+            navLinks[2].addEventListener('click', () => {
+                const sectionTop = document.querySelector('.places').getBoundingClientRect().top;
+
+                window.scroll({top: sectionTop - 53, behavior: "smooth"});
+            })
+
+            navLinks[3].addEventListener('click', () => {
+                const sectionTop = document.querySelector('.hotels').getBoundingClientRect().top;
+
+                window.scroll({top: sectionTop - 53, behavior: "smooth"});
+            })
+        </script>
+    </body>
+
+    <div class="footer">
+        <footer>© All credit goes to Ritesh Yadav - Copyright 2020 </footer>
+    </div>
+    
+</html>
