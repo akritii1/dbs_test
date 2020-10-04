@@ -1,0 +1,409 @@
+<html>
+<head>
+<title>Welcome to Kedarnath</title>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<style>
+body {
+  margin: 0px 30px 60px 30px;
+  color: #666;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px 40px;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+li a.active {
+  color: white;
+  background-color: #A9A9A9;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 34%;
+  height: 600px;
+  margin: 10px 0.5%;
+  float: right;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+
+.container {
+  padding: 8px 16px;
+}
+
+img {
+  width: 100%;
+  height: 60%;
+}
+
+div {
+  width: 100%;
+  overflow: hidden;
+}
+
+.largeicon {
+  padding: 0px 	3%;
+  font-size: 20px;
+}
+
+button {
+  background-color: #ff471a;
+  padding; 20px 15px;
+  color: white;
+  margin 10px;
+  width: 90%;
+  height: 5%;
+  border-color: white;
+}
+
+.floatleft{
+  float: left;
+  width: 28%;
+  margin-top: 15px;
+  padding: 10px 0px 10px 10px;
+  border: 1px solid #D3D3D3;
+}
+
+.left {
+  float: left;
+  width: 50%;
+}
+
+.newcontainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.newcontainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.newcontainer:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.newcontainer input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.newcontainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.newcontainer .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+</style>
+</head>
+<body>
+<!-- navbar -->	
+<ul>
+<li><a href="./best_time.html">Best Time To Visit</a></li>
+<li><a href="./food.html">Food</a></li>
+<li><a href="./photos.html">Photos</a></li>
+<li><a class="active" href="./package.html">Packages</a></li>
+<li><a href="./visit.html">Places To Visit</a></li>
+<li><a href="./index.html">Jammu & Kashmir</a></li>
+</ul>
+
+<div class="floatleft">
+<div>
+<div class="left"><h3><b>Filter By</b></h3></div>
+<div class="left" style="color:red;"><h3><b>Reset All</b></h3></div>
+</div>
+<div>
+<h3><b>Price Range(per person)</b></h3>
+<label class="newcontainer">₹0 - ₹10,000
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="newcontainer">₹10,001 - ₹20,000
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="newcontainer">₹20,001 - ₹50,000
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="newcontainer">₹50000+
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+</div>
+
+<div>
+<h3><b>Duration</b></h3>
+<label class="newcontainer">0 - 4 Days
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="newcontainer">5 - 9 Days
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="newcontainer">10 - 15 Days
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="newcontainer">16 - 25 Days
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="newcontainer">25+ Days
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+</div>
+
+<div>
+<h3><b>Combined With</b></h3>
+<label class="newcontainer">Srinagar
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="newcontainer">Pahalgam
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="newcontainer">Leh Ladakh
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="newcontainer">Gulmarg
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="newcontainer">Amarnath
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+</div>
+
+<div>
+<h3><b>Starting From</b></h3>
+<label class="newcontainer">Srinagar
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="newcontainer">Leh
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="newcontainer">Delhi
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="newcontainer">Gulmarg
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="newcontainer">Sonamarg
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+</div>
+
+</div>
+
+<!-- Card -->
+<div class="card">
+  <div class="container"><b>2. Devotional Amarnath Yatra Via Pahalgam And Srinagar</b></div>
+  <img src="./images/package/2.jpg" alt="Avatar">
+  <div class="container">
+    <p>3 Nights</p>
+    <p>Pahalgam (1N) → Srinagar (2N)</p>
+	<pre><i class="fas fa-bed largeicon"></i> <i class="fas fa-home largeicon"></i> <i class="fa fa-binoculars largeicon"></i> <i class="fas fa-concierge-bell largeicon"></i></pre>
+	<div>
+	<div><p><b>₹ 10,876 Onwards</b></p></div>
+	<button><b>Get Quotes</b></button>
+	</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="container"><b>1. Blessed Amarnath Yatra Via Sonamarg And Srinagar</b></div>
+  <img src="./images/package/1.jpg" alt="Avatar">
+  <div class="container">
+    <p>3 Nights</p>
+    <p>Sonamarg (1N) → Srinagar (2N)<p>
+	<pre><i class="fas fa-bed largeicon"></i> <i class="fas fa-home largeicon"></i> <i class="fa fa-binoculars largeicon"></i> <i class="fas fa-concierge-bell largeicon"></i></pre>
+	<div>
+	<div><p><b>₹ 10,864 Onwards</b></p></div>
+	<button><b>Get Quotes</b></button>
+	</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="container"><b>4. Celestial Budget Amarnath Via Pahalgam And Srinagar</b></div>
+  <img src="./images/package/4.jpg" alt="Avatar">
+  <div class="container">
+    <p>3 Nights</p>
+    <p>Pahalgam (1N) → Srinagar (2N)</p>
+	<pre><i class="fas fa-bed largeicon"></i> <i class="fas fa-home largeicon"></i> <i class="fa fa-binoculars largeicon"></i> <i class="fas fa-concierge-bell largeicon"></i></pre>
+	<div>
+	<div><p><b>₹ 4,514 Onwards</b></p></div>
+	<button><b>Get Quotes</b></button>
+	</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="container"><b>3. Special Offer Amarnath Yatra Via Sonamarg And Srinagar</b></div>
+  <img src="./images/package/3.jpg" alt="Avatar">
+  <div class="container">
+    <p>3 Nights</p>
+    <p>Sonamarg (1N) → Srinagar (2N)</p>
+	<pre><i class="fas fa-bed largeicon"></i> <i class="fas fa-home largeicon"></i> <i class="fa fa-binoculars largeicon"></i> <i class="fas fa-concierge-bell largeicon"></i></pre>
+	<div>
+	<div><p><b>₹ 5,014 Onwards</b></p></div>
+	<button><b>Get Quotes</b></button>
+	</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="container"><b>6. Amarnath Yatra By Private Helicopter Charterr</b></div>
+  <img src="./images/package/6.jpg" alt="Avatar">
+  <div class="container">
+    <p>2 Nights</p>
+    <p>Srinagar (2N)</p>
+	<pre><i class="fas fa-bed largeicon"></i> <i class="fas fa-home largeicon"></i> <i class="fa fa-binoculars largeicon"></i> <i class="fas fa-concierge-bell largeicon"></i></pre>
+	<div>
+	<div><p><b>₹ 26,692 Onwards</b></p></div>
+	<button><b>Get Quotes</b></button>
+	</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="container"><b>5. Pilgrims Travel To Amarnath Yatra With Helicopter</b></div>
+  <img src="./images/package/5.jpg" alt="Avatar">
+  <div class="container">
+    <p>3 Nights</p>
+    <p>Srinagar (3N)</p>
+	<pre><i class="fas fa-bed largeicon"></i> <i class="fas fa-home largeicon"></i> <i class="fa fa-binoculars largeicon"></i> <i class="fas fa-concierge-bell largeicon"></i></pre>
+	<div>
+	<div><p><b>₹ 36,430 Onwards</b></p></div>
+	<button><b>Get Quotes</b></button>
+	</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="container"><b>8. Special Religious Package - Amarnath, Srinagar, Panjtarni</b></div>
+  <img src="./images/package/8.jpg" alt="Avatar">
+  <div class="container">
+    <p>3 Nights</p>
+    <p>Srinagar (1N) → Panjtarni (1N) → Srinagar (1N)</p>
+	<pre><i class="fas fa-bed largeicon"></i> <i class="fas fa-home largeicon"></i> <i class="fa fa-binoculars largeicon"></i> <i class="fas fa-concierge-bell largeicon"></i></pre>
+	<div>
+	<div><p><b>₹ 7,700 Onwards</b></p></div>
+	<button><b>Get Quotes</b></button>
+	</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="container"><b>7. Sanct Amarnath, Srinagar, Pahalgam And More</b></div>
+  <img src="./images/package/7.jpg" alt="Avatar">
+  <div class="container">
+    <p>3 Nights</p>
+    <p>Srinagar (1N) → Pahalgam (1N) → Srinagar (1N)</p>
+	<pre><i class="fas fa-bed largeicon"></i> <i class="fas fa-home largeicon"></i> <i class="fa fa-binoculars largeicon"></i> <i class="fas fa-concierge-bell largeicon"></i></pre>
+	<div>
+	<div><p><b>₹ 10,864 Onwards</b></p></div>
+	<button><b>Get Quotes</b></button>
+	</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="container"><b>10. Devotional - Amarnath, Srinagar, Pahalgam And More</b></div>
+  <img src="./images/package/10.jpg" alt="Avatar">
+  <div class="container">
+    <p>7 Nights</p>
+    <p>Delhi (1N) → Srinagar (2N) → Pahalgam (3N) → Sonamarg (2N)</p>
+	<pre><i class="fas fa-bed largeicon"></i> <i class="fas fa-home largeicon"></i> <i class="fa fa-binoculars largeicon"></i> <i class="fas fa-concierge-bell largeicon"></i></pre>
+	<div>
+	<div><p><b>₹ 21,890 Onwards</b></p></div>
+	<button><b>Get Quotes</b></button>
+	</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="container"><b>9. Religious Amarnath, Srinagar, Sonamarg And More</b></div>
+  <img src="./images/package/9.jpg" alt="Avatar">
+  <div class="container">
+    <p>4 Nights</p>
+    <p>Srinagar (1N) → Sonamarg (2N) → Srinagar (1N)</p>
+	<pre><i class="fas fa-bed largeicon"></i> <i class="fas fa-home largeicon"></i> <i class="fa fa-binoculars largeicon"></i> <i class="fas fa-concierge-bell largeicon"></i></pre>
+	<div>
+	<div><p><b>₹ 7,514 Onwards</b></p></div>
+	<button><b>Get Quotes</b></button>
+	</div>
+  </div>
+</div>
+
+</body>
+</html>
