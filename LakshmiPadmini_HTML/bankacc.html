@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+button:hover {
+  opacity: 0.8;
+}
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+.container {
+  padding: 16px;
+}
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+  .button3 {background-color: #f44336;}
+}
+</style>
+</head>
+<body>
+<h2 style="text-align:center";>Bank Account Opening Form</h2>
+<form action="res1.html" method="post" autocomplete="off">
+<fieldset>
+<legend> Personal Details</legend>
+<label for="fname">First Name :</label>
+<input type="text" id="fname" name="fname" required>
+<label for="lname">Last Name :</label>
+<input type="text" id="lname" name="fname">
+<label for="birthday">Date Of Birth:</label><br>
+<input type="date" id="birthday" name="birthday"><br><br>
+<label for="gen">Gender :</label><br>
+<input type="radio" id="male" name="gender" value="male">
+
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label> <br><br>
+  
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" autocomplete="off" placeholder="@email.com"><br><br>
+  <label for="phone">Enter your phone number:</label><br>
+<input type="tel" id="phone" name="phone" maxlength="10" pattern="[0-9]{10}">
+  </fieldset><br>
+  
+  <fieldset>
+  <legend> Bank Related </legend><br>
+  <label for="acc">Choose Account Type:</label>
+<select id="acc" name="acc">
+  <option value="s">Savings</option>
+  <option value="c">Current</option>
+  </select><br><br>
+  <label for="service">Services Required:</label><br>
+  <input type="checkbox" id="dc" name="service" value="ATM Card">
+  <label for="dc">ATM Card</label><br>
+  <input type="checkbox" id="nb" name="service" value="Net Banking">
+  <label for="nb">Net Banking</label><br>
+  <input type="checkbox" id="cb" name="service" value="cheque Bokk">
+  <label for="cb">Cheque Book</label><br><br>
+  </fieldset><br>
+  <fieldset>
+ <label for="suges">Any Suggestions:</label><br><br>
+ <textarea name="message" rows="10" cols="30">
+ 
+Write your Suggestions Here!!
+</textarea>
+</fieldset>
+<div class="btn-group" style="width:100%">
+  <button class="button button3" style="width:50%" "background-color:red">Cancel</button> <button style="width:50%">Submit</button>
+</div>
+</form>
+</body>
+</html>
