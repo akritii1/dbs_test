@@ -126,6 +126,16 @@
   padding: 2rem;
 }
 
+.food{
+  min-height: 100vh;
+  background-color: floralwhite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
 
 /* Background */
 .carousel {
@@ -139,7 +149,7 @@
   justify-content: center;
   overflow: hidden;
   z-index: -1;
-  opacity: 0.7rem;
+  opacity: 0.5rem;
 }
 
 .carousel > img{
@@ -151,7 +161,7 @@
 
 .carousel::after{
   content: "";
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
 
   position: absolute;
   top: 0;
@@ -173,10 +183,46 @@
   left: 10px;
 }
 
+
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.contact{
+  border-radius: 5px;
+  background-color: floralwhite;
+  padding: 20px;
+  min-height: 100vh;
+}
+
 .footer {
   text-align: center;
   padding: 1px;
   background-color: black;
   color: white;
 }
+
+
 

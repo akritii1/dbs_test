@@ -11,6 +11,7 @@
             <img class="mySlides" src="/img/carousel-1.jpg" >
             <img class="mySlides" src="/img/carousel-4.jpg" >
             <img class="mySlides" src="/img/baliimg1.jpg" >
+            <img class="mySlides" src="/img/carousel-2.jpg">
         </div>
         
         <div class="header">
@@ -22,6 +23,8 @@
                 <li>About</li>
                 <li>Places</li>
                 <li>Hotels</li>
+                <li>Food</li>
+                <li>Contact</li>
             </ul>
         </div>
         
@@ -30,7 +33,6 @@
         </div>
     
         <div class="about">
-            
                 <img src="/img/baliimg3.jpg">
                 <p>Bali is an Indonesian island known for its forested volcanic mountains, iconic rice paddies, beaches and coral reefs. The island is home to religious sites such as cliffside Uluwatu Temple. To the south, the beachside city of Kuta has lively bars, while Seminyak, Sanur and Nusa Dua are popular resort towns. The island is also known for its yoga and meditation retreats.</p>
             
@@ -104,6 +106,62 @@
 
 
 
+        <div class="food">
+            <h1>Don't miss to treat your tastebuds </h1>
+            <div class="cards">
+                <div class="card">
+                    <img src="/img/food1.jpg" alt="">
+                    <h3>Chicken Sate</h3>
+                    <p>Unlike its Malaysian counterpart, Indonesian sate is not satay. Mashed chicken is blended with an array of spices, melded onto a stick (usually lemongrass) and barbequed. Unless written on the menu, it probably won’t include peanut sauce While we prefer the chicken sate (sate ayam), Indonesia specialises in fish sate (lilit ikan). </p>
+                </div>
+                <div class="card">
+                    <img src="/img/food2.jpg" alt="">
+                    <h3>Mie Goreng
+                    </h3>
+                    <p>A classic Indonesian staple of fried noodles is often served with vegetables and a choice of chicken, shrimp or pork. Sometimes it served with a fried egg on top, chicken sate sticks, prawn crackers and peanut sauce. Oh, and don’t forget the pickled vegetables. Josh’s favourite.</p>
+                </div>
+                <div class="card">
+                    <img src="/img/food3.jpg" alt="">
+                    <h3>Pisang Goreng
+                    </h3>
+                    <p>Because nothing is sweeter than my all-time favourite – fried bananas. Bali has such a variety of bananas from the small, sweet varieties to the large ones that look like a weapon. The different types make fried bananas a treat each time. Served with honey or palm sugar syrup, a little bit of flaked coconut or vanilla ice cream or just plain from the roadside stalls, nothing is better than Pisang Goreng. </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact">
+            <h2>Drop your query here and I'll get back to you!</h2><br>
+            <form action="/action_page.php">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+              <label for="email">E-mail</label>
+              <input type="text" id="email" name="email" placeholder="Your email id..">
+          
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="india">India</option>
+                <option value="africa">Africa</option>
+                <option value="australia">Australia</option>
+                <option value="nz">NewZealand</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+                
+              </select>
+          
+              <label for="subject">Suggestions/Queries</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+
+
+
+
         <script>
             var myIndex = 0;
             carousel();
@@ -139,8 +197,21 @@
                 window.scroll({top: sectionTop - 53, behavior: "smooth"});
             })
 
+
             navLinks[3].addEventListener('click', () => {
                 const sectionTop = document.querySelector('.hotels').getBoundingClientRect().top;
+
+                window.scroll({top: sectionTop - 53, behavior: "smooth"});
+            })
+
+            navLinks[4].addEventListener('click', () => {
+                const sectionTop = document.querySelector('.food').getBoundingClientRect().top;
+
+                window.scroll({top: sectionTop - 53, behavior: "smooth"});
+            })
+
+            navLinks[5].addEventListener('click', () => {
+                const sectionTop = document.querySelector('.contact').getBoundingClientRect().top;
 
                 window.scroll({top: sectionTop - 53, behavior: "smooth"});
             })
