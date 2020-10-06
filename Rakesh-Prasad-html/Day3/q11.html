@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Employee Records</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h3>Row Span</h3>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Month</th>
+                <th>Savings</th>
+                <th rowspan="3">Savings for holiday!</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>January</td>
+                <td>$100</td>
+                <td rowspan="0">$100</td>
+              </tr>
+              <tr>
+                <td>February</td>
+                <td>$80</td>
+              </tr>
+              <tr>
+                <td>March</td>
+                <td>$100</td>
+              </tr>
+            </tbody>
+            </table>   
+            <hr>
+            <h3>Col span</h3>
+            <table class="table table-striped">
+                <tr>
+                  <th>Month</th>
+                  <th>Savings</th>
+                </tr>
+                <tr>
+                  <td>January</td>
+                  <td>$100</td>
+                </tr>
+                <tr>
+                  <td>February</td>
+                  <td>$80</td>
+                </tr>
+                <tr>
+                  <td colspan="2">Sum: $180</td>
+                </tr>
+              </table>         </div>
+</body>
+
+</html>
