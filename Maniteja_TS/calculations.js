@@ -1,0 +1,12 @@
+var x = 12;
+var y = 3;
+var z = x + y;
+var z1 = x - y;
+var z2 = x * y;
+var z3 = x / y;
+var z4 = x % y;
+console.log(z);
+console.log(z1);
+console.log(z2);
+console.log(z3);
+console.log(z4);
