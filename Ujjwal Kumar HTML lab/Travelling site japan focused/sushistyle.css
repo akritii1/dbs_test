@@ -1,0 +1,137 @@
+*{
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+.header{
+	height: 100px;
+	width: 100%;
+	position: fixed;
+	background-color:#dfd8e4;
+}
+.logo{
+	float: left;
+	width: 38%;
+    padding:40px 80px;
+    text-decoration: solid;
+    text-shadow: rgb(65, 48, 3);
+    font-weight: bolder;
+}
+.menu{
+    position: relative;
+	float: right;
+	padding-top: 40px;
+	padding-right: 20px;
+}
+
+.menu ul li{
+	display: inline;
+	
+}
+.logo a{
+	text-decoration: none;
+	color: #4976B1;
+	font-size: 20px;
+}
+.menu ul li a{
+	text-decoration: none;
+	padding: 5px 10px 5px 10px;
+	font-size: 20px;
+	color: #35639C;
+}
+
+.menu ul li:hover
+{
+    background: white;
+    border-radius: 3px;
+}
+
+.sub-menu{
+    display: none;
+
+}
+
+.menu ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    padding: 0px 79px;
+    
+}
+
+.menu ul li:hover .sub-menu ul{
+    position: absolute;
+    background-color:#83c8e482;
+    border-radius: 3px;
+    min-width: 90px;
+}
+
+.menu ul li:hover .sub-menu li a{
+    color: #1D2937;
+    text-align: center;
+}
+
+.sub-menu ul li:hover ul{
+    display: block;
+    position: absolute;
+    padding: 0px 90px;
+    margin: -20px 4px;
+    
+}
+
+.sub-menu ul li:hover ul{
+    position: absolute;
+    background-color:#83c8e482;
+    border-radius: 3px;
+    min-width: 100px;
+}
+
+.sub-menu ul li:hover li a{
+    color: #1D2937;
+    text-align: center;
+}
+
+/*---- end of header section----*/
+
+
+
+#home{
+	background-image: url(pictures/900777.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+	background-attachment: fixed;
+   
+}
+
+.home-content {
+    padding: 150px 80px;
+}
+.home-content h1{
+
+	height: 35px;
+	width: 420px;
+	color: #010046;
+	font-size: 35px;
+}
+.home-contentpara {
+    padding: 40px 20px;
+}
+.home-contentpara p{
+    background-color:#00000082;
+    width: 500px;
+    color: #ffffff;
+    padding-top: 25px;
+    font-size: 25px;
+	
+}
+ /* end of home section*/
+
+
+footer{
+    background-color: rgb(42, 80, 124);
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+}

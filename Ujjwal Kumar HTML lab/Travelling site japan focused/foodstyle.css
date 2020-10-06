@@ -1,0 +1,222 @@
+*{
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+.header{
+	height: 100px;
+	width: 100%;
+	position: fixed;
+	background-color:#dfd8e4;
+}
+.logo{
+	float: left;
+	width: 38%;
+    padding:40px 80px;
+    text-decoration: solid;
+    text-shadow: rgb(65, 48, 3);
+    font-weight: bolder;
+}
+.menu{
+    position: relative;
+	float: right;
+	padding-top: 40px;
+	padding-right: 20px;
+}
+
+.menu ul li{
+	display: inline;
+	
+}
+.logo a{
+	text-decoration: none;
+	color: #4976B1;
+	font-size: 20px;
+}
+.menu ul li a{
+	text-decoration: none;
+	padding: 5px 10px 5px 10px;
+	font-size: 20px;
+	color: #35639C;
+}
+
+.menu ul li:hover
+{
+    background: white;
+    border-radius: 3px;
+}
+
+.sub-menu{
+    display: none;
+
+}
+
+.menu ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    padding: 0px 79px;
+    
+}
+
+.menu ul li:hover .sub-menu ul{
+    position: absolute;
+    background-color:#83c8e482;
+    border-radius: 3px;
+    min-width: 90px;
+}
+
+.menu ul li:hover .sub-menu li a{
+    color: #1D2937;
+    text-align: center;
+}
+
+.sub-menu ul li:hover ul{
+    display: block;
+    position: absolute;
+    padding: 0px 90px;
+    margin: -20px 4px;
+    
+}
+
+.sub-menu ul li:hover ul{
+    position: absolute;
+    background-color:#83c8e482;
+    border-radius: 3px;
+    min-width: 100px;
+}
+
+.sub-menu ul li:hover li a{
+    color: #1D2937;
+    text-align: center;
+}
+
+/*---- end of header section----*/
+.city a:link, a:visited {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+  }
+
+#city{
+	background-color: #225568;
+	height: 520px;
+	width: 100%;
+	padding-top: 80px;
+    color: #fff;
+
+}
+.city-left {
+    background-image: url(pictures/Sushi_platter.jpg);
+    background-color: #fff;
+    height: 444.5px;
+    margin-left: 50px;
+    width: 360px;
+    float: left;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.city-middle {
+    width: 360px;
+    height: 445px;
+    float: left;
+    margin-left: 40px;
+    background-image: url(pictures/tofu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.city-right {
+    background-color: #fff;
+    height: 445px;
+    margin-left: 40px;
+    width: 360px;
+    float: left;
+    background-image: url(pictures/ramen.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.city_h_layout {
+    background-color: #192d42bd;
+    height: 50px;
+    width: 85%;
+    margin: 20px;
+    
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 3px 3px #1e2e38;
+}
+.city_title{
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+
+/*--- end of city style--*/
+
+#gallery{
+    color: #fff;
+    background-color: #193a4a;
+    height: 520px;
+    width: 100%;
+    border-top: 1px solid #56728a;
+    padding-top: 20px;
+}
+.gallery_content{
+    text-align: center;
+    font-size: 20px;
+    margin: 10px 0px;
+}
+.gallery_frame {
+    background-color: white;
+    margin: 30px 220px;
+    height: 404px;
+    width: 812px;
+}
+.gallery_frame ul li{
+   display: inline;
+}
+
+.frame_image {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin-left: 2.5px;
+    margin-top: 1.5px;
+}
+.frame_image img{
+    height: 100%;
+    width: 100%;
+    }
+
+.pic-content {
+    float: left;
+    color: rgb(29, 3, 124);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-top: 70px;
+    top: -100%;
+    position: absolute;
+    background-color: #b5adf36e;
+    box-sizing: border-box;
+}
+
+.frame_image:hover .pic-content{
+   top: 0%; 
+   transition-duration: 0.8s; 
+}
+
+
+/*--- end of gallery--*/
+
+
+footer{
+    background-color: rgb(42, 80, 124);
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+}
