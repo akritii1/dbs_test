@@ -1,0 +1,10 @@
+var x = 25;
+var y = 5;
+var z = x + y;
+console.log(z);
+var a = x - y;
+var b = x * y;
+var c = x / y;
+console.log(a);
+console.log(b);
+console.log(c);
