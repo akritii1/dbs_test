@@ -1,0 +1,12 @@
+var x = 10;
+var y = 20;
+var add = x + y;
+var sub = x - y;
+var mult = x * y;
+var div = x / y;
+var rem = x % y;
+console.log("Addition : " + add);
+console.log("Subtraction : " + sub);
+console.log("Multiplication : " + mult);
+console.log("Divison : " + div);
+console.log("Remainder : " + rem);
